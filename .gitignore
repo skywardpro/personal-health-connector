@@ -1,0 +1,12 @@
+# Secrets and build output. Signing keys live OUTSIDE this repository.
+*.p12
+*.jks
+*.keystore
+*.pem
+keystore-password*
+local.properties
+.gradle/
+build/
+.idea/
+*.apk
+*.aab
