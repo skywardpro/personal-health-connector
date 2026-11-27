@@ -5,6 +5,7 @@ Facts submitted on the HUAWEI Developers console (individual developer).
 | Field | Value |
 | --- | --- |
 | Product name | Personal Health Connector |
+| HUAWEI Developers app ID | `120011809` (not secret) |
 | Product type | Mobile app, product: new |
 | Package name | `app.personalhealthconnector` |
 | Certificate SHA-256 (1) | `BC:E1:94:ED:96:F5:A5:47:2D:35:70:7F:BD:D3:43:4C:2D:93:0D:E7:00:A0:1D:CF:72:55:E7:4A:F3:BF:DD:65` |
@@ -20,3 +21,6 @@ Open-source Android application that lets a user export their own raw health dat
 - Individual developers: app must be released on AppGallery; only basic-level data; no adverse credit record.
 - Manual review about 10 to 15 workdays; test scopes limited to 100 users; verification within 6 to 12 months or scopes are revoked.
 - Least privilege: request only the scopes the app really uses.
+
+## Credentials
+The app ID above is public. The app SECRET is a credential and is NOT stored in this repository: it lives next to the signing key in `D:\Projects\PersonalHealthConnector-signing\huawei-app-credentials.txt` (outside the repo), and the Android app must read it from a local, git-ignored config, never from source.
