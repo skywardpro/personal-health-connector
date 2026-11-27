@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Personal Health Connector - Application Material</title>
+<style>
+@page{size:A4;margin:16mm 14mm}
+body{font:11pt/1.4 Arial,Helvetica,sans-serif;color:#111}
+h1{font-size:20pt;color:#c7000b;margin:0 0 4px}h2{font-size:14pt;margin:18px 0 6px;border-bottom:2px solid #c7000b;padding-bottom:3px}
+table{border-collapse:collapse;width:100%;margin:6px 0}th{background:#c7000b;color:#fff;text-align:left;padding:6px;font-size:10pt}
+td{border:1px solid #999;padding:6px;vertical-align:top;font-size:10pt}.k{width:28%;font-weight:bold;background:#f4f4f4}
+.note{color:#555;font-size:9.5pt}.pb{page-break-before:always}.shots{display:flex;gap:10px}.shots figure{margin:0;width:48%;text-align:center}
+.shots img{width:100%;border:1px solid #bbb}figcaption{font-size:9.5pt;margin-top:4px}
+</style></head><body>
+<h1>Huawei Developer Application: Health Service Kit</h1>
+<p class="note">Applicant type: <b>individual developer</b> (identity verified on HUAWEI Developers). Product: <b>Personal Health Connector</b>, package <b>app.personalhealthconnector</b>, app ID <b>120011809</b>. Source code, privacy policy and user agreement are public: https://github.com/skywardpro/personal-health-connector</p>
+
+<h2>1. Data Usage</h2>
+<p>Data the app applies for on the Health Service Kit platform and the corresponding usage scenarios.</p>
+<table>
+<tr><th>Permission</th><th>Usage scenario and requirements</th><th>Usage purpose</th><th>Client / iOS</th><th>Development completion</th></tr>
+<tr><td>Read sleep data<br>(healthkit/sleep.read)</td>
+<td>Read the user's own sleep records (sleep duration, light/deep/REM time, awake time, wake-up count, sleep score, fall-asleep and wake-up times) and save them as raw JSON, one file per day, into the user's own Google Drive folder or a folder on the user's phone. Read only; nothing is written to Huawei Health.</td>
+<td>Let the user keep a personal, portable copy of their own sleep data and analyse it in their own tools, bots and AI assistants. The developer runs no server and receives no data.</td>
+<td>Android mobile app (third-party Android). iOS: not supported.</td><td>2026-11-28</td></tr>
+<tr><td>Read historical data</td>
+<td>Read the user's earlier recorded sleep nights once on first run after consent, then each new night incrementally. Same sleep data types as above; no other data types.</td>
+<td>Without historical access the app could only export nights recorded after installation and the user could not build a complete personal archive. Historical data is used only for the one-time initial export to the user's own drive and for the user's own long-term analysis (weekly, monthly, yearly trends in their own tools). It is not shown to anyone else, not shared and not kept by the developer.</td>
+<td>Android mobile app. iOS: not supported.</td><td>2026-11-28</td></tr>
+</table>
+<p class="note">Remarks: only the sleep read permission and the historical data permission are requested (data minimization). Data synchronization is not used. The app is not a medical product.</p>
+
+<h2>2. Screenshots of the app</h2>
+<p class="note">Current debug build on an Android emulator. The Huawei access state is shown as "Not granted yet" because the application is pending.</p>
+<div class="shots">
+<figure><img src="../screenshots/01-welcome.png"><figcaption>1. Welcome and consent</figcaption></figure>
+<figure><img src="../screenshots/02-signin.png"><figcaption>2. HUAWEI ID sign-in and access status</figcaption></figure></div>
+<div class="shots pb">
+<figure><img src="../screenshots/03-folder.png"><figcaption>3. Data types and export destinations</figcaption></figure>
+<figure><img src="../screenshots/04-status.png"><figcaption>4. Schedule and export status</figcaption></figure></div>
+
+<h2 class="pb">3. Company Description</h2>
+<p>Not applicable: the applicant is an individual developer, not an enterprise. Individual developers apply for basic-level data scopes only; no advanced-level scope is requested.</p>
+
+<h2>4. Project Details</h2>
+<table>
+<tr><td class="k">Application introduction</td><td>Personal Health Connector is a free, open-source Android app that lets a user export their own raw health data from Huawei Health to a file in their own cloud drive or a folder on their phone, for personal use and for the user's own tools, bots and analysis apps. The developer runs no server and receives no user data. Each user accesses only their own data.</td></tr>
+<tr><td class="k">Application industry</td><td>Health and fitness / personal data tool (utility)</td></tr>
+<tr><td class="k">Purpose of scope application</td><td>The sleep read scope is used to export the user's own sleep records as raw JSON to the user's own drive. The historical data scope is used for a one-time initial export of earlier nights, followed by incremental export of new nights. No data is shown to or shared with anyone other than the user. Medical use: none.</td></tr>
+<tr><td class="k">Project leader for Huawei-side connection</td><td>Mikita Plotnikau, mail@skyward.pro</td></tr>
+<tr><td class="k">Cooperation details</td><td>None.</td></tr>
+<tr><td class="k">Purchasing needs</td><td>No.</td></tr>
+</table>
+
+<h2>5. Technical Self-test</h2>
+<table>
+<tr><th>Self-check content</th><th>Result</th></tr>
+<tr><td>Countries this app serves</td><td>Countries/regions on the official "Supported Countries/Regions (Basic Capabilities)" list of Health Service Kit. Users need a HUAWEI ID registered in one of them.</td></tr>
+<tr><td>Commercial release or demo</td><td>Non-commercial release. Free open-source utility; planned release on AppGallery.</td></tr>
+<tr><td>Application types to access Health Service Kit</td><td>Android mobile app (third-party Android).</td></tr>
+<tr><td>Access method</td><td>Android Java API (device-side SDK).</td></tr>
+<tr><td>Do the applied permissions meet the needs</td><td>Y</td></tr>
+<tr><td>Medical treatment involved</td><td>N. The app only exports raw data and gives no diagnosis or medical advice.</td></tr>
+<tr><td>Expected authorized users and TPS</td><td>One test user (the developer), up to the 100-user test limit; a few requests per user per day, TPS far below 1.</td></tr>
+<tr><td>Real-time data required</td><td>N</td></tr>
+</table>
+<p class="note">Privacy policy: https://skywardpro.github.io/personal-health-connector/PRIVACY &nbsp;|&nbsp; User agreement: https://skywardpro.github.io/personal-health-connector/TERMS</p>
+</body></html>
