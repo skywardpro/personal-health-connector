@@ -24,3 +24,9 @@ Open-source Android application that lets a user export their own raw health dat
 
 ## Credentials
 The app ID above is public. The app SECRET is a credential and is NOT stored in this repository: it lives next to the signing key in `D:\Projects\PersonalHealthConnector-signing\huawei-app-credentials.txt` (outside the repo), and the Android app must read it from a local, git-ignored config, never from source.
+
+## Google Drive (app side)
+Google OAuth Android client ID (public, not a secret): `802062018625-63iq41488a0a5mkcbhnarmt28fpllgk8.apps.googleusercontent.com`; package `app.personalhealthconnector`, release certificate SHA-1 `A3:3B:06:F1:39:6C:75:E8:4E:C2:DE:B7:64:C0:C9:E1:02:E2:ED:AE`. Scope: `drive.file` only. It is a build config field (`GOOGLE_CLIENT_ID`).
+
+## App status
+v0.1.0 builds and runs (screens in `docs/screenshots`). Real sleep reads need Huawei's scope approval; until then the app says "not granted yet". Huawei sign-in on a real phone may need an `agconnect-services.json` from AppGallery Connect (not present; the build does not require it).

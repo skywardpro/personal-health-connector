@@ -10,3 +10,10 @@ build/
 .idea/
 *.apk
 *.aab
+
+# Android build
+.gradle/
+build/
+*.apk
+keystore.properties
+.kotlin/

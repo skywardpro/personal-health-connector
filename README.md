@@ -2,11 +2,17 @@
 
 An open-source Android app that exports **your own** raw health data from Huawei Health (read-only) to a file in **your own** cloud drive, so you can use it in your own tools, bots, AI agents and analysis apps.
 
-Status: planning. The app is not written yet; the Huawei Health Service Kit application is being prepared (see [docs/APPLICATION.md](docs/APPLICATION.md)).
+Status: first working version (v0.1.0). The UI and flow run; reading real data waits for Huawei to approve the sleep scope (see [docs/APPLICATION.md](docs/APPLICATION.md)). Until then the app shows "not granted yet". Screenshots: [docs/screenshots](docs/screenshots).
+
+## Build
+JDK 17 and the Android SDK (platform 34), then `./gradlew assembleDebug`. Debug builds are signed with the release key when a git-ignored `keystore.properties` (`storeFile`, `alias`, `password`) exists in the repo root, otherwise with the default debug key (Google sign-in then will not match). Huawei's Maven repo is declared in `settings.gradle.kts`; no `agconnect-services.json` is used so far.
+
+## Dependencies
+Compose (BOM, Material 3), activity-compose, WorkManager (schedule), DocumentFile (local folder), play-services-auth (Google authorization for the `drive.file` scope; Drive itself is plain REST), Huawei `com.huawei.hms:health` 6.16.0.300 (Health Service Kit).
 
 ## What it does
 - Reads health data (sleep first; more types as Huawei grants them) through Huawei's official Health Service Kit on the phone.
-- Writes raw JSON, one file per day, into a folder in the user's own Google Drive.
+- Writes raw JSON, one file per day, into the user's own Google Drive (folder "Personal Health Connector", `drive.file` scope) and/or a folder on the phone.
 - Nothing else: no developer-side server, no analytics, no accounts.
 
 ## What it does not do
