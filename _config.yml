@@ -1,0 +1,6 @@
+title: Personal Health Connector
+description: Open-source Android app that exports your own raw health data from Huawei Health to your own drive.
+theme: jekyll-theme-minimal
+exclude:
+  - docs
+  - LICENSE

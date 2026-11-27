@@ -14,7 +14,7 @@ Status: planning. The app is not written yet; the Huawei Health Service Kit appl
 - It never sends data to the developer or to any third party.
 
 ## Privacy
-See [PRIVACY.md](PRIVACY.md).
+See [PRIVACY.md](PRIVACY.md) and the [user agreement](TERMS.md). Published pages: https://skywardpro.github.io/personal-health-connector/PRIVACY and https://skywardpro.github.io/personal-health-connector/TERMS
 
 ## Not affiliated with Huawei
 Huawei and Huawei Health are trademarks of their owners. This project is independent and only uses Huawei's public developer API.
