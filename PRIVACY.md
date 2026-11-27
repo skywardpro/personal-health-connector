@@ -9,4 +9,4 @@ Personal Health Connector is a tool for exporting your own health data. The deve
 - **Sharing:** none. What you do with the exported files is up to you.
 - **Deleting your data:** delete the exported folder in your Drive, revoke access in your Huawei and Google account settings, and uninstall the app.
 
-Contact: via the project's issue tracker (address to be added at publication).
+Developer and contact: Mikita Plotnikau, mail@skyward.pro. Questions can also be raised in the project's issue tracker.

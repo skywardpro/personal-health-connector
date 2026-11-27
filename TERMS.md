@@ -9,3 +9,5 @@ Personal Health Connector ("the app") is free, open-source software (MIT licence
 5. **No warranty.** The app is provided "as is", without warranty of any kind, to the extent permitted by law. Huawei's services may change or stop working, which can break the app.
 6. **Independence.** The app is independent and not affiliated with or endorsed by Huawei or Google.
 7. **Changes.** These terms may be updated in the project repository; continued use means acceptance.
+
+Developer: Mikita Plotnikau, mail@skyward.pro.
