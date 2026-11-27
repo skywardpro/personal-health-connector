@@ -113,13 +113,13 @@ private fun SectionCard(title: String, content: @Composable ColumnScope.() -> Un
     }
 }
 
-/** State chip: [ok] green-ish, otherwise warning-ish. */
+/** State chip: [ok] positive, otherwise neutral (not an error; errors use ErrorText). */
 @Composable
 private fun StatusChip(text: String, ok: Boolean) {
     val c = MaterialTheme.colorScheme
-    Surface(shape = RoundedCornerShape(50), color = if (ok) c.primaryContainer else c.tertiaryContainer) {
+    Surface(shape = RoundedCornerShape(50), color = if (ok) c.primaryContainer else c.surfaceVariant) {
         Row(Modifier.padding(horizontal = 12.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-            Icon(if (ok) Icons.Filled.CheckCircle else Icons.Filled.Warning, null, Modifier.size(16.dp))
+            Icon(if (ok) Icons.Filled.CheckCircle else Icons.Filled.Info, null, Modifier.size(16.dp))
             Spacer(Modifier.width(6.dp))
             Text(text, style = MaterialTheme.typography.labelLarge)
         }

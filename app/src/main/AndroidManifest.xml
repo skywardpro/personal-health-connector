@@ -4,6 +4,8 @@
     <application
         android:label="Personal Health Connector"
         android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:theme="@style/Theme.PHC">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
